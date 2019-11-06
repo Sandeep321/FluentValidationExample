@@ -15,10 +15,10 @@ namespace FluentValidationExample.Controllers
             return new[] { "value1", "value2" };
         }
 
-        [HttpPost]
+        [HttpPost("Test")]
         public ActionResult<string> Post([FromBody] StudentViewModel model)
         {
-            return "Student was added";
+            return $"Student {model.Name} was added";
         }
     }
 }
